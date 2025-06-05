@@ -8,70 +8,108 @@
 </head>
 <body>
 
-<div class="lang-select">
-    <label for="language">Choisir une langue :</label>
-    <input type="hidden" id="language" name="language" value="fr">
-    <div id="custom-language-dropdown" style="display:inline-block;position:relative;">
-        <button id="selected-lang" type="button">🇫🇷 Français</button>
-        <ul id="lang-list" style="display:none;position:absolute;list-style:none;margin:0;padding:0;background:#fff;border:1px solid #ccc;">
-        <li data-value="fr">🇫🇷 Français</li>
-        <li data-value="en">🇬🇧 English</li>
-        <li data-value="it">🇮🇹 Italiano</li>
-        <li data-value="ja">🇯🇵 日本語</li>
-        <li data-value="tr">🇹🇷 Türkçe</li>
-        </ul>
-    </div>
-    </div>
-
-    <script>
-    const dropdownBtn = document.getElementById('selected-lang');
-    const langList = document.getElementById('lang-list');
-    dropdownBtn.onclick = () => {
-    langList.style.display = langList.style.display === 'block' ? 'none' : 'block';
-    };
-    langList.onclick = (e) => {
-    if (e.target.tagName === 'LI') {
-        dropdownBtn.textContent = e.target.textContent;
-        langList.style.display = 'none';
-        document.getElementById('language').value = e.target.dataset.value;
-        // Trigger change event if needed
-        document.getElementById('language').dispatchEvent(new Event('change'));
-    }
-    };
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-    if (!dropdownBtn.contains(e.target) && !langList.contains(e.target)) {
-        langList.style.display = 'none';
-    }
-    });
-    </script>
-</div>
-
-  <div id="cv-content">
-    <h1 data-i18n="name">Thomas LE DRET</h1>
-
-    <p><strong data-i18n="title">Étudiant 4A INFO - INSA</strong></p>
-    <p><strong>Email:</strong> <span data-i18n="email">ledret.thomas@gmail.com</span></p>
-    <p><strong>Téléphone:</strong> <span data-i18n="phone">+33 7 71 20 96 95</span></p>
-    <p><strong>Adresse:</strong> <span data-i18n="address">122 Rue de Châtillon, Rennes</span></p>
-
-
-    <div class="cv-section">
-      <h2 data-i18n="education">Formation</h2>
-      <ul>
-        <li><strong>INSA Rennes</strong> - Ingénierie Logiciel Big Data / IA (2023 - présent)</li>
-        <li><strong>Prépa INSA Rennes</strong> - Sciences & Techniques (2021 - 2023)</li>
-        <li><strong>Lycée Ste Thérèse, Quimper</strong> - Bac Math/Physique + Cambridge C1 (2021)</li>
+<nav class="toolbar">
+    <div class="toolbar-left">
+      <button id="menu-toggle" aria-label="Menu">&#9776;</button>
+      <ul id="toolbar-menu" class="toolbar-menu">
+        <li><a href="index.html" data-i18n="nav-profile">Profil</a></li>    
+        <li><a href="skills.html" data-i18n="nav-skills">Compétences</a></li>
+        <li><a href="contacts.html" data-i18n="nav-contacts">Contacts</a></li>
       </ul>
     </div>
+    <div class="toolbar-right">
+      <div class="lang-select">
+        <input type="hidden" id="language" name="language" value="fr">
+        <div id="custom-language-dropdown" style="display:inline-block;position:relative;color:black">
+          <button id="selected-lang" type="button">🇫🇷 Français</button>
+          <ul id="lang-list" style="display:none;position:absolute;list-style:none;margin:0;padding:0;background:#fff;border:1px solid #ccc;">
+            <li data-value="fr">🇫🇷 Français</li>
+            <li data-value="en">🇬🇧 English</li>
+            <li data-value="it">🇮🇹 Italiano</li>
+            <li data-value="ja">🇯🇵 日本語</li>
+            <li data-value="tr">🇹🇷 Türkçe</li>
+          </ul>
+        </div>
+      </div>
 
-    <div class="cv-section">
-      <h2 data-i18n="skills">Compétences</h2>
-      <p><strong data-i18n="software">Logiciels:</strong> Microsoft 365, Google Suite, LaTeX</p>
-      <p><strong>Programmation:</strong> Python, Java, C++, C#, Ruby, PHP, C, Assembleur, Prolog, OCaml</p>
+      <script>
+        const dropdownBtn = document.getElementById('selected-lang');
+        const langList = document.getElementById('lang-list');
+        dropdownBtn.onclick = () => {
+        langList.style.display = langList.style.display === 'block' ? 'none' : 'block';
+        };
+        langList.onclick = (e) => {
+        if (e.target.tagName === 'LI') {
+            dropdownBtn.textContent = e.target.textContent;
+            langList.style.display = 'none';
+            document.getElementById('language').value = e.target.dataset.value;
+            // Trigger change event if needed
+            document.getElementById('language').dispatchEvent(new Event('change'));
+        }
+        };
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+        if (!dropdownBtn.contains(e.target) && !langList.contains(e.target)) {
+            langList.style.display = 'none';
+        }
+        });
+    </script>
+    </div>
+  </nav>
+
+
+  <div id="cv-content">
+    <div style="text-align: center;">
+      <img src="IMG_6072.JPG" alt="Photo de Thomas LE DRET" style="max-width: 180px; border-radius: 50%; display: block; margin: 0 auto 1em auto; margin-top: 1em;">
+      <h1 data-i18n="name" style="margin: 0 auto;">Thomas LE DRET</h1>
+    </div></div>
+
+    <div class="section">
+        <h2 data-i18n="positions">Occupations</h2>
+        <div class="positions-header">
+            <span style="flex:2" data-i18n="header-title">Titre</span>
+            <span style="flex:1" data-i18n="header-dates">Dates</span>
+            <span style="flex:2" data-i18n="header-location">Lieu</span>
+            <span style="flex:3" data-i18n="header-description">Description</span>
+        </div>
+        <div class="position" style="display: flex; gap: 1em; align-items: flex-start;">
+            <span class="position-title" style="flex:2" data-i18n="student"><strong>Étudiant INFO - INSA</strong></span>
+            <span class="position-dates" style="flex:2">
+            <time class="start-date" datetime="2023-09-XX">2023-09-XX</time>
+            <span class="separator"> - </span>
+            <time class="end-date" id="current-date" datetime=""></time>
+            <script>
+             // Set current date in ISO format
+              const today = new Date();
+              const yyyy = today.getFullYear();
+              const mm = String(today.getMonth() + 1).padStart(2, '0');
+              const dd = String(today.getDate()).padStart(2, '0');
+              const isoDate = `${yyyy}-${mm}-${dd}`;
+              const currentDateElem = document.getElementById('current-date');
+              if (currentDateElem) {
+                currentDateElem.setAttribute('datetime', isoDate);
+                currentDateElem.textContent = isoDate;
+              }
+            </script>
+            </span>
+            <span class="position-location" data-i18n="insa-rennes">INSA Rennes,  20 Av. des Buttes de Coesmes, 35700 Rennes</span>
+            <span class="position-description"  data-i18n="student-description-info">Ingénierie Génie Logiciel , Option Big Data / IA</span>
+        </div>
+        <div class="position" style="display: flex; gap: 1em; align-items: flex-start;">
+            <span class="position-title" style="flex:2" data-i18n="student_stpi"><strong>Étudiant STPI - INSA</strong></span>
+            <span class="position-dates">
+            <time class="start-date" datetime="2021-09-XX">2021-09-XX</time>
+            <span class="separator"> - </span>
+            <time class="end-date" datetime="2023-06-XX">2023-06-XX</time>
+            </span>
+            <span class="position-location" data-i18n="insa-rennes">INSA Rennes</span>
+            <span class="position-description" data-i18n="student-description-stpi">Classe préparatoire intégrée de l'INSA Rennes, Option FIRE (international)</span>
+        </div>
     </div>
 
-   <div class="cv-section">
+
+<!-- Language Levels Section-->
+   <div class="section">
     <h2 data-i18n="languages">Langues</h2>
 
     <div class="language-container">
@@ -119,126 +157,54 @@
     </div>
 
 
-    <div class="cv-section">
+    <div class="section">
       <h2 data-i18n="hobbies">Loisirs</h2>
       <p><span data-i18n="hobby-list">Escalade, Kayak, Cuisine, Lecture, Jeux (Magic, D&D)</span></p>
     </div>
 
-    <div class="cv-section">
+    <div class="section">
       <h2 data-i18n="about">Profil Personnel</h2>
       <p data-i18n="profile-text">Âgé de 21 ans, sociable et curieux. Bénévolat, engagement associatif (Phénix de Quimper, ISKIS Rennes, Club Amour).</p>
     </div>
   </div>
 
   <script>
-    const translations = {
-      fr: {
-        "name": "Thomas LE DRET",
-        "title": "Étudiant 4A INFO - INSA",
-        "address": "122 Rue de Châtillon, Rennes, France",
-        "education": "Formation",
-        "skills": "Compétences",
-        "software": "Logiciels",
-        "languages": "Langues",
-        "lang-fr": "Français",
-        "lang-en": "Anglais",
-        "lang-it": "Italien",
-        "lang-ja": "Japonais",
-        "lang-tr": "Turc",
-        "spoken": "Français, Anglais (C2), Italien, Japonais (B1), Turc (A2)",
-        "hobbies": "Loisirs",
-        "hobby-list": "Escalade, Kayak, Cuisine, Lecture, Jeux (Magic, D&D)",
-        "about": "Profil Personnel",
-        "profile-text": "Âgé de 21 ans, sociable et curieux. Bénévolat, engagement associatif (Phénix de Quimper, ISKIS Rennes, Club Amour)."
-      },
-      en: {
-        "name": "Thomas LE DRET",
-        "title": "4th Year Software Engineering Student - INSA",
-        "address": "122 Rue de Châtillon, Rennes, France",
-        "education": "Education",
-        "skills": "Skills",
-        "software": "Software",
-        "languages": "Languages",
-        "lang-fr": "French",
-        "lang-en": "English",
-        "lang-it": "Italian",
-        "lang-ja": "Japanese",
-        "lang-tr": "Turkish",
-        "spoken": "French, English (C2), Italian, Japanese (B1), Turkish (A2)",
-        "hobbies": "Hobbies",
-        "hobby-list": "Climbing, Kayaking, Cooking, Reading, Games (Magic, D&D)",
-        "about": "Personal Profile",
-        "profile-text": "21 years old, sociable and curious. Volunteer and association involvement (Phénix, ISKIS, Club Amour).",
-},
-      it: {
-        "name": "Thomas LE DRET",
-        "title": "Studente di Ingegneria del Software - INSA",
-        "address": "122 Rue de Châtillon, Rennes, Francia",
-        "education": "Formazione",
-        "skills": "Competenze",
-        "software": "Software",
-        "languages": "Lingue",
-        "lang-fr": "Francese",
-        "lang-en": "Inglese",
-        "lang-it": "Italiano",
-        "lang-ja": "Giapponese",
-        "lang-tr": "Turco",
-        "spoken": "Francese, Inglese (C2), Italiano, Giapponese (B1)",
-        "hobbies": "Hobby",
-        "hobby-list": "Arrampicata, Kayak, Cucina, Lettura, Giochi (Magic, D&D)",
-        "about": "Profilo Personale",
-        "profile-text": "21 anni, socievole e curioso. Volontariato e attività associative (Phénix, ISKIS, Club Amour).",
-      },
-      ja: {
-        "name": "トマ・ル・ドレ",
-        "title": "INSAのソフトウェアエンジニアリング学生（4年目）",
-        "address": "122 Rue de Châtillon, レンヌ、フランス",
-        "education": "学歴",
-        "skills": "スキル",
-        "software": "ソフトウェア",
-        "languages": "言語",
-        "lang-fr": "フランス語",
-        "lang-en": "英語",
-        "lang-it": "イタリア語",
-        "lang-ja": "日本語",
-        "lang-tr": "トルコ語",
-        "spoken": "フランス語、英語（C2）、イタリア語、日本語（B1）、トルコ語（A2）",
-        "hobbies": "趣味",
-        "hobby-list": "クライミング、カヤック、料理、読書、ゲーム（マジック、D&D）",
-        "about": "自己紹介",
-        "profile-text": "21歳、社交的で好奇心旺盛。ボランティアと団体活動（Phénix、ISKIS、Club Amour）。",
-      },
-      tr: {
-        "name": "Thomas LE DRET",
-        "title": "INSA Yazılım Mühendisliği 4. Sınıf Öğrencisi",
-        "address": "122 Rue de Châtillon, Rennes, Fransa",
-        "education": "Eğitim",
-        "skills": "Beceriler",
-        "software": "Yazılım",
-        "languages": "Diller",
-        "lang-fr": "Fransızca",
-        "lang-en": "İngilizce",
-        "lang-it": "İtalyanca",
-        "lang-ja": "Japonca",
-        "lang-tr": "Türkçe",
-        "spoken": "Fransızca, İngilizce (C2), İtalyanca, Japonca (B1), Türkçe (A2)",
-        "hobbies": "Hobiler",
-        "hobby-list": "Tırmanış, Kano, Yemek, Okuma, Oyunlar (Magic, D&D)",
-        "about": "Kişisel Profil",
-        "profile-text": "21 yaşında, sosyal ve meraklı. Gönüllü çalışmalar ve dernek faaliyetleri (Phénix, ISKIS, Club Amour).",
-      }
-    };
-
-    const langSelector = document.getElementById("language");
-    langSelector.addEventListener("change", (e) => {
-      const lang = e.target.value;
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (translations[lang] && translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
+  function loadLanguageFile(lang, callback) {
+    fetch(`translations/${lang}.json`)
+      .then(response => {
+        if (!response.ok) throw new Error("Language file not found");
+        return response.json();
+      })
+      .then(data => {
+        applyTranslations(data);
+        if (callback) callback();
+      })
+      .catch(error => {
+        console.error("Error loading translation file:", error);
       });
+  }
+
+  function applyTranslations(translations) {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[key]) {
+        el.innerHTML = translations[key];
+      }
     });
-  </script>
+  }
+
+  const langSelector = document.getElementById("language");
+
+  langSelector.addEventListener("change", (e) => {
+    const lang = e.target.value;
+    loadLanguageFile(lang);
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const defaultLang = langSelector?.value || "fr";
+    loadLanguageFile(defaultLang);
+  });
+</script>
+
 </body>
 </html>
