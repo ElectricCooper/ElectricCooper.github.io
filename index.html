@@ -1,7 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Thomas LE DRET</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2em;
+    }
+    .lang-select {
+      margin-bottom: 1em;
+    }
+    .cv-section {
+      margin-top: 2em;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+  <div class="lang-select">
+    <label for="language">Choisir une langue :</label>
+    <select id="language">
+      <option value="fr">Français</option>
+      <option value="en">English</option>
+      <option value="it">Italiano</option>
+      <option value="ja">日本語</option>
+      <option value="tr">Türkçe</option>
+    </select>
+  </div>
+
+  <div id="cv-content">
+    <h1 data-i18n="name">Thomas LE DRET</h1>
+
+    <p><strong data-i18n="title">Étudiant 4A INFO - INSA</strong></p>
+    <p><strong>Email:</strong> <span data-i18n="email">ledret.thomas@gmail.com</span></p>
+    <p><strong>Téléphone:</strong> <span data-i18n="phone">+33 7 71 20 96 95</span></p>
+    <p><strong>Adresse:</strong> <span data-i18n="address">122 Rue de Châtillon, Rennes</span></p>
+
+    <div class="cv-section">
+      <h2 data-i18n="experience">Expérience Professionnelle</h2>
+      <ul>
+        <li>
+          <strong>ISCR - UMR 6226</strong> - Stagiaire, Rennes (06/2022 - 07/2022)<br>
+          <span data-i18n="internship">Synthèse et caractérisation physico-chimique de chaînes-aimants. Rédaction de rapports scientifiques, gestion du temps.</span>
+        </li>
+        <li>
+          <strong>Initial Textiles</strong> - Opérateur de production (07/2022 - 08/2022)<br>
+          <span data-i18n="operator">Utilisation de machines, tri du linge, manutentions. Endurance et adaptabilité.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="cv-section">
+      <h2 data-i18n="education">Formation</h2>
+      <ul>
+        <li><strong>INSA Rennes</strong> - Ingénierie Logiciel Big Data / IA (2023 - présent)</li>
+        <li><strong>Prépa INSA Rennes</strong> - Sciences & Techniques (2021 - 2023)</li>
+        <li><strong>Lycée Ste Thérèse, Quimper</strong> - Bac Math/Physique + Cambridge C1 (2021)</li>
+      </ul>
+    </div>
+
+    <div class="cv-section">
+      <h2 data-i18n="skills">Compétences</h2>
+      <p><strong data-i18n="software">Logiciels:</strong> Microsoft 365, Google Suite, LaTeX</p>
+      <p><strong>Programmation:</strong> Python, Java, C++, C#, Ruby, PHP, C, Assembleur, Prolog, OCaml</p>
+    </div>
+
+    <div class="cv-section">
+      <h2 data-i18n="languages">Langues</h2>
+      <p><span data-i18n="spoken">Français, Anglais (C2), Italien, Japonais (B1), Turc (A2)</span></p>
+    </div>
+
+    <div class="cv-section">
+      <h2 data-i18n="hobbies">Loisirs</h2>
+      <p><span data-i18n="hobby-list">Escalade, Kayak, Cuisine, Lecture, Jeux (Magic, D&D)</span></p>
+    </div>
+
+    <div class="cv-section">
+      <h2 data-i18n="about">Profil Personnel</h2>
+      <p data-i18n="profile-text">Âgé de 21 ans, sociable et curieux. Bénévolat, engagement associatif (Phénix de Quimper, ISKIS Rennes, Club Amour).</p>
+    </div>
+  </div>
+
+  <script>
+    const translations = {
+      en: {
+        "title": "4th Year Software Engineering Student - INSA",
+        "address": "122 Rue de Châtillon, Rennes, France",
+        "experience": "Professional Experience",
+        "internship": "Synthesis and physicochemical characterization of chain magnets. Report writing and time management.",
+        "operator": "Machine operation, laundry sorting, manual handling. Physical endurance and adaptability.",
+        "education": "Education",
+        "skills": "Skills",
+        "software": "Software",
+        "languages": "Languages",
+        "spoken": "French, English (C2), Italian, Japanese (B1), Turkish (A2)",
+        "hobbies": "Hobbies",
+        "hobby-list": "Climbing, Kayaking, Cooking, Reading, Games (Magic, D&D)",
+        "about": "Personal Profile",
+        "profile-text": "21 years old, sociable and curious. Volunteer and association involvement (Phénix, ISKIS, Club Amour).",
+},
+      it: {
+        "title": "Studente di Ingegneria del Software - INSA",
+        "address": "122 Rue de Châtillon, Rennes, Francia",
+        "experience": "Esperienza Professionale",
+        "internship": "Sintesi e caratterizzazione di catene magnetiche. Stesura di rapporti e gestione del tempo.",
+        "operator": "Utilizzo macchine, smistamento biancheria, movimentazione. Resistenza fisica e adattabilità.",
+        "education": "Formazione",
+        "skills": "Competenze",
+        "software": "Software",
+        "languages": "Lingue",
+        "spoken": "Francese, Inglese (C2), Italiano, Giapponese (B1)",
+        "hobbies": "Hobby",
+        "hobby-list": "Arrampicata, Kayak, Cucina, Lettura, Giochi (Magic, D&D)",
+        "about": "Profilo Personale",
+        "profile-text": "21 anni, socievole e curioso. Volontariato e attività associative (Phénix, ISKIS, Club Amour).",
+      },
+      ja: {
+        "name": "トマ・ル・ドレ",
+        "title": "INSAのソフトウェアエンジニアリング学生（4年目）",
+        "address": "122 Rue de Châtillon, レンヌ、フランス",
+        "experience": "職務経験",
+        "internship": "チェーン磁石の合成と物理化学的特性評価。報告書作成と時間管理。",
+        "operator": "機械の操作、洗濯物の仕分け、体力と適応力。",
+        "education": "学歴",
+        "skills": "スキル",
+        "software": "ソフトウェア",
+        "languages": "言語",
+        "spoken": "フランス語、英語（C2）、イタリア語、日本語（B1）、トルコ語（A2）",
+        "hobbies": "趣味",
+        "hobby-list": "クライミング、カヤック、料理、読書、ゲーム（マジック、D&D）",
+        "about": "自己紹介",
+        "profile-text": "21歳、社交的で好奇心旺盛。ボランティアと団体活動（Phénix、ISKIS、Club Amour）。",
+      },
+      tr: {
+        "title": "INSA Yazılım Mühendisliği 4. Sınıf Öğrencisi",
+        "address": "122 Rue de Châtillon, Rennes, Fransa",
+        "experience": "İş Deneyimi",
+        "internship": "Zincir mıknatısların sentezi ve fiziksel-kimyasal karakterizasyonu. Rapor yazımı ve zaman yönetimi.",
+        "operator": "Makine kullanımı, çamaşır ayrımı, fiziksel dayanıklılık ve uyum.",
+        "education": "Eğitim",
+        "skills": "Beceriler",
+        "software": "Yazılım",
+        "languages": "Diller",
+        "spoken": "Fransızca, İngilizce (C2), İtalyanca, Japonca (B1), Türkçe (A2)",
+        "hobbies": "Hobiler",
+        "hobby-list": "Tırmanış, Kano, Yemek, Okuma, Oyunlar (Magic, D&D)",
+        "about": "Kişisel Profil",
+        "profile-text": "21 yaşında, sosyal ve meraklı. Gönüllü çalışmalar ve dernek faaliyetleri (Phénix, ISKIS, Club Amour).",
+      }
+    };
+
+    const langSelector = document.getElementById("language");
+    langSelector.addEventListener("change", (e) => {
+      const lang = e.target.value;
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    });
+  </script>
 </body>
 </html>
