@@ -79,6 +79,7 @@ ul li {
   font-size: 0.85em;
   color: #666;
   margin-bottom: 8px;
+  margin-left: 20%;
   padding: 0 8px;
 }
 
@@ -103,25 +104,39 @@ ul li {
 }
 
 .lang-bar {
+  position: relative;
   flex: 1;
-  height: 12px;
-  background: #e0e0e0;
+  height: 14px;
+  background: linear-gradient(to right, #e74c3c, #f1c40f, #2ecc71); /* Full bar gradient */
   border-radius: 6px;
   margin: 0 10px;
   overflow: hidden;
 }
 
-.lang-progress {
+.lang-bar[data-fill="100"]::after { width: 0%; }
+.lang-bar[data-fill="80"]::after { width: 20%; }
+.lang-bar[data-fill="60"]::after { width: 40%; }
+.lang-bar[data-fill="50"]::after { width: 50%; }
+.lang-bar[data-fill="20"]::after { width: 80%; }
+
+.lang-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
   height: 100%;
-  background: linear-gradient(90deg, #e74c3c, #f1c40f, #2ecc71); /* red -> yellow -> green */
-  border-radius: 6px 0 0 6px;
+  width: 100%;
+  background: #e0e0e0; /* Background for progress bar */
   transition: width 0.4s ease-in-out;
 }
 
-.lang-level {
-  width: 30px;
-  font-size: 0.85em;
-  color: #333;
-  text-align: right;
+.lang-progress {
+  height: 100%;
+  background: transparent; /* Transparent to show the gradient background */
+  border-radius: 6px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
 }
 
