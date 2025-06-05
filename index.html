@@ -21,13 +21,41 @@
 
 <div class="lang-select">
     <label for="language">Choisir une langue :</label>
-    <select id="language">
-        <option value="fr" data-flag="🇫🇷">🇫🇷 Français</option>
-        <option value="en" data-flag="🇬🇧">🇬🇧 English</option>
-        <option value="it" data-flag="🇮🇹">🇮🇹 Italiano</option>
-        <option value="ja" data-flag="🇯🇵">🇯🇵 日本語</option>
-        <option value="tr" data-flag="🇹🇷">🇹🇷 Türkçe</option>
-    </select>
+    <input type="hidden" id="language" name="language" value="fr">
+    <div id="custom-language-dropdown" style="display:inline-block;position:relative;">
+        <button id="selected-lang" type="button">🇫🇷 Français</button>
+        <ul id="lang-list" style="display:none;position:absolute;list-style:none;margin:0;padding:0;background:#fff;border:1px solid #ccc;">
+        <li data-value="fr">🇫🇷 Français</li>
+        <li data-value="en">🇬🇧 English</li>
+        <li data-value="it">🇮🇹 Italiano</li>
+        <li data-value="ja">🇯🇵 日本語</li>
+        <li data-value="tr">🇹🇷 Türkçe</li>
+        </ul>
+    </div>
+    </div>
+
+    <script>
+    const dropdownBtn = document.getElementById('selected-lang');
+    const langList = document.getElementById('lang-list');
+    dropdownBtn.onclick = () => {
+    langList.style.display = langList.style.display === 'block' ? 'none' : 'block';
+    };
+    langList.onclick = (e) => {
+    if (e.target.tagName === 'LI') {
+        dropdownBtn.textContent = e.target.textContent;
+        langList.style.display = 'none';
+        document.getElementById('language').value = e.target.dataset.value;
+        // Trigger change event if needed
+        document.getElementById('language').dispatchEvent(new Event('change'));
+    }
+    };
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+    if (!dropdownBtn.contains(e.target) && !langList.contains(e.target)) {
+        langList.style.display = 'none';
+    }
+    });
+    </script>
 </div>
 
   <div id="cv-content">
