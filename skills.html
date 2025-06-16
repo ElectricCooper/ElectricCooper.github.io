@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <script src="lang.js"></script>
 
     <nav class="toolbar">
     <div class="toolbar-left">
@@ -95,13 +96,22 @@
 
     langSelector.addEventListener("change", (e) => {
     const lang = e.target.value;
+    localStorage.setItem("preferredLang", lang);
     loadLanguageFile(lang);
     });
 
     document.addEventListener("DOMContentLoaded", () => {
-    const defaultLang = langSelector?.value || "fr";
-    loadLanguageFile(defaultLang);
-    });
+      const savedLang = localStorage.getItem("preferredLang") || "fr";
+      langSelector.value = savedLang;
+      loadLanguageFile(savedLang);
+
+      // Update label
+      const selectedLangBtn = document.getElementById("selected-lang");
+      const selectedOption = document.querySelector(`#lang-list li[data-value="${savedLang}"]`);
+      if (selectedLangBtn && selectedOption) {
+        selectedLangBtn.textContent = selectedOption.textContent;
+      }
+   });
     </script>
 </body>
 </html>
