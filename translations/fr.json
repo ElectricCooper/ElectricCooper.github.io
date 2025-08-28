@@ -12,7 +12,6 @@
     "lang-ja": "Japonais",
     "lang-tr": "Turc",
     "hobbies": "Loisirs",
-    "insa-rennes": "INSA Rennes,  20 Av. des Buttes de Coesmes, 35700 Rennes",
     "student-description-info": "Ingénierie Génie Logiciel , Option Big Data / IA",
     "student-description-stpi": "Classe préparatoire intégrée de l'INSA Rennes, Option FIRE (international)",
     "hobby-list": "Escalade, Kayak, Cuisine, Lecture, Jeux (Magic, D&D)",
@@ -31,5 +30,7 @@
     "language-text-it-trips": "Durée cumulée de 2 mois en Italie, dans le cadre de séjours linguistiques",
     "language-text-it-trip": "Séjour de 2 semaine en Turquie (<strong>Istanbul</strong> et <strong>Izmir</strong>), en maison d'hôte, en 2024",
     "language-text-tr-mobility": "Mobilité d'un semestre à l'İTÜ (<a href=\"https://bbf.itu.edu.tr/en\" target=\"_blank\" rel=\"noopener\">İstanbul Teknik Üniversitesi</a>) dans le cadre de mon cursus d'ingénierie en 2025-2026",
-    "footer-text": "© 2025 Thomas LE DRET - Portfolio"
+    "footer-text": "© 2025 Thomas LE DRET - Portfolio",
+    "student_ITU": "Étudiant M5 INFO - İTÜ",
+    "itu-student-description-info": "Cours centrés sur le Deep Learning, l'IA, la Visualisation Scientifique et les Mathématiques appliqués à ces domaines"
 }

@@ -25,6 +25,9 @@ h1, h2 {
   padding: 1em;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin-top: 1em;
+  display: flex; 
+  gap: 1em; 
+  align-items: flex-start;
 }
 
 .position:hover {
@@ -34,17 +37,17 @@ h1, h2 {
 .position-title {
     font-size: 1.15em;
     color: #1a2a3a;
-    font-weight: 600;
+    font-weight: bold;
     display: block;
     margin-bottom: 4px;
-    flex:2;
+    flex:1;
 }
 .position-dates {
     font-size: 0.98em;
     color: #555;
     margin-bottom: 8px;
     display: block;
-    flex:2;
+    flex:1;
 }
 .position-location {
     font-size: 0.9em;
@@ -282,6 +285,47 @@ ul li {
   top: 0;
   z-index: 2;
 }
+
+/* Hobbies Section */
+
+.hobby-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 1rem;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.hobby-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hobby-card h3 {
+  margin: 0.5em 0;
+  font-size: 1.1rem;
+
+}
+
+.hobby-card.square {
+  width: 200px;
+  height: 200px;
+}
+
+.hobby-card.square img {
+  width: 100%;
+  height: calc(100% - 2rem);
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 
 /* Miscellaneous */
 

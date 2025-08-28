@@ -67,16 +67,26 @@
 
     <div class="section">
         <h2 data-i18n="positions">Occupations</h2>
-        <div class="positions-header">
-            <span style="flex:2" data-i18n="header-title">Titre</span>
+        <div class="position" style="font-weight: bold; background-color: #f0f0f0; padding: 0.5em; margin-bottom: 0.5em; display: flex; gap: 1em; align-items: center;">
+            <span style="flex:1" data-i18n="header-title">Titre</span>
             <span style="flex:1" data-i18n="header-dates">Dates</span>
             <span style="flex:2" data-i18n="header-location">Lieu</span>
             <span style="flex:3" data-i18n="header-description">Description</span>
         </div>
-        <div class="position" style="display: flex; gap: 1em; align-items: flex-start;">
-            <span class="position-title" style="flex:2" data-i18n="student"><strong>Étudiant INFO - INSA</strong></span>
-            <span class="position-dates" style="flex:2">
-            <time class="start-date" datetime="2023-09-XX">2023-09-XX</time>
+        <div class="position">
+            <span class="position-title" data-i18n="student_ITU">Étudiant M5 INFO - İTÜ</span>
+            <span class="position-dates">
+            <time class="start-date" datetime="2025-09-22">2025-09-22</time>
+            <span class="separator"> - </span>
+            <time class="end-date" datetime="2026-01-02">2026-01-02</time>
+            </span>
+            <span class="position-location" >Reşitpaşa, İTÜ Ayazağa Kampüsü Rektörlük Binası, 34467 Sarıyer/İstanbul, Turquie</span>
+            <span class="position-description"  data-i18n="itu-student-description-info" style="flex:3"> Cours centrés sur le Deep Learning, l'IA, la Visualisation Scientifique et les Mathématiques appliqués à ces domaines </span>
+        </div>
+        <div class="position">
+            <span class="position-title" data-i18n="student">Étudiant INFO - INSA</span>
+            <span class="position-dates">
+            <time class="start-date" datetime="2023-09-01">2023-09-01</time>
             <span class="separator"> - </span>
             <time class="end-date" id="current-date" datetime=""></time>
             <script>
@@ -93,17 +103,17 @@
               }
             </script>
             </span>
-            <span class="position-location" data-i18n="insa-rennes">INSA Rennes,  20 Av. des Buttes de Coesmes, 35700 Rennes</span>
-            <span class="position-description"  data-i18n="student-description-info">Ingénierie Génie Logiciel , Option Big Data / IA</span>
+            <span class="position-location">INSA Rennes,  20 Av. des Buttes de Coesmes, 35700 Rennes</span>
+            <span class="position-description"  data-i18n="student-description-info" style="flex:3">Ingénierie Génie Logiciel , Option Big Data / IA</span>
         </div>
-        <div class="position" style="display: flex; gap: 1em; align-items: flex-start;">
-            <span class="position-title" style="flex:2" data-i18n="student_stpi"><strong>Étudiant STPI - INSA</strong></span>
+        <div class="position">
+            <span class="position-title" data-i18n="student_stpi">Étudiant STPI - INSA</span>
             <span class="position-dates">
-            <time class="start-date" datetime="2021-09-XX">2021-09-XX</time>
+            <time class="start-date" datetime="2021-09-01">2021-09-01</time>
             <span class="separator"> - </span>
-            <time class="end-date" datetime="2023-06-XX">2023-06-XX</time>
+            <time class="end-date" datetime="2023-06-30">2023-06-30</time>
             </span>
-            <span class="position-location" data-i18n="insa-rennes">INSA Rennes</span>
+            <span class="position-location">INSA Rennes,  20 Av. des Buttes de Coesmes, 35700 Rennes</span>
             <span class="position-description" data-i18n="student-description-stpi">Classe préparatoire intégrée de l'INSA Rennes, Option FIRE (international)</span>
         </div>
     </div>
@@ -177,7 +187,39 @@
 <!-- Hobbies Section -->
     <div class="section">
       <h2 data-i18n="hobbies">Loisirs</h2>
-      <p><span data-i18n="hobby-list">Escalade, Kayak, Cuisine, Lecture, Jeux (Magic, D&D)</span></p>
+      <div class="hobby-cards">
+
+        <div class="hobby-card square">
+          <img src="library_part.jpg" alt="Lecture">
+           <h3>Lecture</h3>
+        </div>
+
+        <div class="hobby-card square">
+          <h3>Escalade</h3>
+          <!-- <img src="escalade.jpg" alt="Escalade"> -->
+        </div>
+
+        <div class="hobby-card square">
+          <img src="kayak.jpg" alt="Kayak">
+          <h3>Kayak</h3>
+        </div>
+
+        <div class="hobby-card square">
+          <h3>Cuisine</h3>
+          <img src="applepie.jpg" alt="Cuisine">
+        </div>
+
+        <div class="hobby-card square">
+          <img src="mtga.jpg" alt="Magic">
+          <h3>Magic : The Gathering Arena</h3>
+        </div>
+
+        <div class="hobby-card square">
+          <h3>Musique</h3>
+          <!-- <img src="music.jpg" alt="Musique"> -->        
+        </div>
+
+      </div>
     </div>
 
 <!-- Personal Profile Section -->

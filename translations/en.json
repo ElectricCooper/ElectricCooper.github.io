@@ -5,12 +5,10 @@
   "nav-profile": "Profile",
   "nav-skills": "Skills",
   "nav-contacts": "Contacts",
-
   "contact": "Contact me",
   "skills": "Skills",
   "software": "Software",
   "languages": "Languages",
-  "insa-rennes": "INSA Rennes,  20 Av. des Buttes de Coesmes, 35700 Rennes",
   "student-description-info": "Software Engineering, Big Data / AI specialization",
   "student-description-stpi": "Integrated preparatory class at INSA Rennes, FIRE (international) option",
   "lang-fr": "French",
@@ -32,5 +30,7 @@
   "language-text-it-trips": "Total of 2 months spent in Italy for language stays",
   "language-text-it-trip": "Two-week stay in Turkey (<strong>Istanbul</strong> and <strong>Izmir</strong>), in a guesthouse, 2024",
   "language-text-tr-mobility": "One semester mobility at İTÜ (<a href=\"https://bbf.itu.edu.tr/en\" target=\"_blank\" rel=\"noopener\">İstanbul Teknik Üniversitesi</a>) as part of my engineering studies in 2025-2026",
-  "footer-text": "© 2025 Thomas LE DRET - Portfolio"
+  "footer-text": "© 2025 Thomas LE DRET - Portfolio",
+  "student_ITU": "Graduate Level Student in Computer Science - İTÜ",
+  "itu-student-description-info": "Courses focused on Deep Learning, AI, Scientific Visualization, and Mathematics applied to these fields"
 }

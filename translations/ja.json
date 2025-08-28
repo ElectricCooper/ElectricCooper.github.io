@@ -4,7 +4,6 @@
     "address": "122 Rue de Châtillon, レンヌ、フランス",
     "skills": "スキル",
     "contact": "連絡先",
-    "insa-rennes": "INSA Rennes,  20 Av. des Buttes de Coesmes, 35700 Rennes",
     "student-description-info": "ソフトウェアエンジニアリング、ビッグデータ/AI専門",
     "student-description-stpi": "INSA Rennesの統合予備クラス、FIRE（国際）オプション",
     "software": "ソフトウェア",
@@ -31,5 +30,7 @@
     "language-text-it-trips": "イタリアでの語学滞在で累計2ヶ月間滞在",
     "language-text-it-trip": "2024年にトルコ（<strong>イスタンブール</strong>と<strong>イズミル</strong>）で2週間のホームステイ",
     "language-text-tr-mobility": "2025-2026年にİTÜ（<a href=\"https://bbf.itu.edu.tr/en\" target=\"_blank\" rel=\"noopener\">イスタンブル工科大学</a>）でエンジニアリング課程の一環として1学期の留学",
-    "footer-text": "© 2025 Thomas LE DRET - ポートフォリオ"
+    "footer-text": "© 2025 Thomas LE DRET - ポートフォリオ",
+    "student_ITU": "M5 INFO - İTÜの大学院生",
+    "itu-student-description-info": "ディープラーニング、AI、科学的可視化、これらの分野に応用される数学に焦点を当てたコース"
 }

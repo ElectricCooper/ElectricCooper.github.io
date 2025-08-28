@@ -4,7 +4,6 @@
     "address": "122 Rue de Châtillon, Rennes, Fransa",
     "skills": "Beceriler",
     "contact": "İletişim",
-    "insa-rennes": "INSA Rennes,  20 Av. des Buttes de Coesmes, 35700 Rennes",
     "student-description-info": "Yazılım Mühendisliği, Big Data / AI uzmanlığı",
     "student-description-stpi": "INSA Rennes Entegre Hazırlık Sınıfı, FIRE (uluslararası) seçeneği",
     "software": "Yazılım",
@@ -31,5 +30,7 @@
     "language-text-it-trips": "İtalya'da toplam 2 ay süren dil gezileri",
     "language-text-it-trip": "2024 yılında Türkiye'de (<strong>İstanbul</strong> ve <strong>İzmir</strong>) 2 haftalık konuk evinde konaklama",
     "language-text-tr-mobility": "2025-2026 yıllarında mühendislik eğitimim kapsamında İTÜ'de (<a href=\"https://bbf.itu.edu.tr/en\" target=\"_blank\" rel=\"noopener\">İstanbul Teknik Üniversitesi</a>) bir dönemlik hareketlilik",
-    "footer-text": "© 2025 Thomas LE DRET - Portföy"
+    "footer-text": "© 2025 Thomas LE DRET - Portföy",
+    "student_ITU": "Bilgisayar Bilimleri Lisansüstü Öğrencisi - İTÜ",
+    "itu-student-description-info": "Derin Öğrenme, AI, Bilimsel Görselleştirme ve bu alanlara uygulanan Matematik üzerine odaklanan dersler"
 }

@@ -9,7 +9,6 @@
     "lang-ja": "Giapponese",
     "lang-tr": "Turco",
     "contact": "Contattami",
-    "insa-rennes": "INSA Rennes,  20 Av. des Buttes de Coesmes, 35700 Rennes",
     "student-description-info": "Ingegneria del Software, specializzazione in Big Data / IA",
     "student-description-stpi": "Classe preparatoria integrata presso INSA Rennes, opzione FIRE (internazionale)",
     "skills": "Competenze",
@@ -31,5 +30,7 @@
     "language-text-it-trips": "Durata totale di 2 mesi in Italia, nell'ambito di soggiorni linguistici",
     "language-text-it-trip": "Soggiorno di 2 settimane in Turchia (<strong>Istanbul</strong> e <strong>Izmir</strong>), in guest house, nel 2024",
     "language-text-tr-mobility": "Mobilità di un semestre presso l'İTÜ (<a href=\"https://bbf.itu.edu.tr/en\" target=\"_blank\" rel=\"noopener\">İstanbul Teknik Üniversitesi</a>) nell'ambito del mio percorso di ingegneria nel 2025-2026",
-    "footer-text": "© 2025 Thomas LE DRET - Portfolio"
+    "footer-text": "© 2025 Thomas LE DRET - Portfolio",
+    "student_ITU": "Studente di Livello Laurea in Informatica - İTÜ",
+    "itu-student-description-info": "Corsi incentrati su Deep Learning, IA, Visualizzazione Scientifica e Matematica applicata a questi campi"
 }
